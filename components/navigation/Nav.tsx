@@ -4,7 +4,6 @@ import { Navigation } from './Navigation'
 import './nav.css'
 import logo from '../../assets/images/Logotype_Mecadom.png'
 import Link from 'next/link'
-import { IonIcon } from '@ionic/react';
 import Image from 'next/image'
 
 
@@ -28,7 +27,7 @@ export default function Nav() {
 
 
             <div className="menu-button_menu" onClick={() => menu()}>
-                <IonIcon name="menu-outline"></IonIcon>
+                {/* <IonIcon name="menu-outline"></IonIcon> */}
             </div>
 
             <div className="menu">
