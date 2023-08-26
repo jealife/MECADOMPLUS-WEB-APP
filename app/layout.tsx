@@ -10,7 +10,14 @@ export const metadata: Metadata = {
   title: 'MACADOM | Marketplace of car mechanics for Home Maintenance services',
   description: 'Mécadom Plus met en relation des particuliers avec des mécaniciens professionnels indépendants pour l’entretien automobile à domicile. ',
   icons: {
-    icon: './favicon.ico'
+    icon: {
+      url:'/favicon.ico',
+      type:'image/ico'
+    },
+    shortcut:{
+      url:'/sortcut.png',
+      type:'image/png'
+    }
   }
 }
 
@@ -19,6 +26,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  
   return (
     
     <html lang="en">
@@ -31,3 +39,4 @@ export default function RootLayout({
     </html>
   )
 }
+

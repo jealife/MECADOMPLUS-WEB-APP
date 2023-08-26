@@ -20,7 +20,7 @@ export default function Nav() {
     }
     return (
         <nav className="flex items-center justify-center p-4 gap-2">
-            <Link href="#" className="logo">
+            <Link href="/" className="logo">
             <Image src={logo} 
                     alt="Logo Mecadom" />
             </Link>
