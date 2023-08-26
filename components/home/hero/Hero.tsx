@@ -11,7 +11,7 @@ export default function Hero() {
                         <div className="top">
                             <span> ne cherchez plus loin </span>
                             <h1 className="hero-title">
-                                Trouvez un <span>Mécanicien</span>
+                                Trouvez un <span>Mécanicien </span>
                                 où que vous soyez
                             </h1>
                             <p>
