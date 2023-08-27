@@ -1,20 +1,35 @@
+'use client'
+
 import User from "@/components/listUsers/User";
+import { useEffect,useState } from "react";
+import axios from 'axios';
 
-export default async function admin() {
+export default function Admin() {
+  const [data, setData] = useState([]);
 
-    const data = await fetch(
-        'https://mecadom.electroniqueclasse.com/api/users'
-    )
+  useEffect(() => {
+    axios.get('https://mecadom.electroniqueclasse.com/api/users')
+     .then(response => setData(response.data))
+     .catch(error => console.error(error));
+  }, []);
 
-    const res = await data.json();
+  if (!data) {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen">
             <div className="list flex flex-col gap-3">
-                {res.map((user: any) => (
+                Chargement...
+            </div>
+        </div>
+    );
+  }
+    return (
+        <div className="flex flex-col items-center justify-center min-h-screen">
+            <div className="list flex flex-col gap-3">
+                {data.map( (user: { id: any; full_name: any; email: any; }) => (
 
                     <User key={user.id}
                         ID={user.id}
-                        FirstName={user.first_name}
+                        FirstName={user.full_name}
                         Email={user.email}
                     />
 
